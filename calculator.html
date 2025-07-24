@@ -1,0 +1,52 @@
+<html>
+<head>
+Calculator</head>
+<body>
+<input id = "val1"/>
+<input id = "val2"/>
+<br>
+<br>
+<button id = "AddBtn">Addition</button>   <!--This is called an event-->
+<button id = "SubBtn">Subtraction</button>
+<button id = "MulBtn">Multiplication</button>
+<button id = "DivBtn">Division</button>
+<p id = "Result"></p>             <!--page tag element-->
+</body>
+<script>
+document.getElementById("AddBtn").onclick=Add;    //onclick is an event 
+document.getElementById("SubBtn").onclick=Sub;
+document.getElementById("MulBtn").onclick=Mul; 
+document.getElementById("DivBtn").onclick=Div;  
+function Add()
+{
+    //document.getElementById() this is inbuld command in JS
+   let a = document.getElementById("val1").value;    
+   let b = document.getElementById("val2").value;
+   let res = parseInt(a)+parseInt(b);     //parseInt() is a method in JS to convert txt into number
+   document.getElementById("Result").innerHTML=res; //
+
+}
+function Sub()
+{  
+   let a = document.getElementById("val1").value;    
+   let b = document.getElementById("val2").value;
+   let res = parseInt(a)-parseInt(b);     
+   document.getElementById("Result").innerHTML=res; 
+}
+function Mul()
+{  
+   let a = document.getElementById("val1").value;    
+   let b = document.getElementById("val2").value;
+   let res = parseInt(a)*parseInt(b);     
+   document.getElementById("Result").innerHTML=res; 
+}
+function Div()
+{  
+   let a = document.getElementById("val1").value;    
+   let b = document.getElementById("val2").value;
+   let res = parseInt(a)/parseInt(b);     
+   document.getElementById("Result").innerHTML=res; 
+}
+</script>
+
+</html>
